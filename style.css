@@ -1,0 +1,108 @@
+.container{
+    z-index: 1;
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+.overlay{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    opacity: 0;
+    transition: .4s ease;
+    background-color: #202020;
+}
+        
+.container:hover .overlay{
+    opacity: 1;
+}
+        
+.text{
+    color: #188886;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+a:visited{
+    color: #188886;
+    background-color: transparent;
+    text-decoration: none;
+}
+          
+a:hover{
+    color: #5f0350;
+    background-color: transparent;
+    transition: .5s ease-in-out;
+    text-decoration: underline;
+}
+          
+a:active{
+    color: #188886;
+    background-color: transparent;
+    transition: .5s ease-in-out;
+    text-decoration: underline;
+}
+
+
+
+
+
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(50,1fr);
+    grid-template-rows: repeat(25,1fr);
+    background: #181818;
+    filter: saturate(5);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 3;
+    filter: brightness(1.1);
+    transition: 0.5s ease;
+    position: relative;
+    margin: 1px;
+    background: #202020ab;
+}
+
+.colorBox:hover{
+    background: #188886;
+    transition-duration: 0s;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #5f0350;
+    filter: blur(120px);
+    animation: animBack 5s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -50%;
+    }
+    100%{
+        top: 150%;
+    }
+}
